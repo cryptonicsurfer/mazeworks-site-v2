@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levande Organiska Bildmasker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --blob-color-1: rgba(59, 130, 246, 0.2); /* Blå ton */
+            --blob-color-2: rgba(168, 85, 247, 0.2); /* Lila ton */
+        }
+
+        /* En mer komplex morphing-animation med fler steg för "levande" känsla */
+        @keyframes liquidMorph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            25% { border-radius: 45% 55% 50% 50% / 35% 65% 35% 65%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            75% { border-radius: 55% 45% 40% 60% / 65% 35% 65% 35%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+
+        /* Subtil flytande rörelse */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+        }
+
+        /* Animation för bakgrunds-bloben */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
+        }
+
+        .founder-card {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            perspective: 1000px;
+        }
+
+        .blob-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Den färgade bakgrunden som "läcker ut" bakom bilden */
+        .blob-bg {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background: linear-gradient(45deg, var(--blob-color-1), var(--blob-color-2));
+            filter: blur(20px);
+            animation: liquidMorph 12s linear infinite, pulse 15s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .organic-mask-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 10;
+            background: #e5e7eb;
+            animation: liquidMorph 8s ease-in-out infinite, float 10s ease-in-out infinite;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Vid hover: gör masken lite mer cirkulär och skala upp */
+        .founder-card:hover .organic-mask-container {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            animation-play-state: paused; /* Stannar upp rörelsen för fokus */
+            border-radius: 50% !important; /* Blir en perfekt cirkel vid hover */
+        }
+
+        .masked-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.15); /* Lite extra zoom så masken inte klipper vitt */
+            transition: transform 0.6s ease;
+        }
+
+        .founder-card:hover .masked-image {
+            transform: scale(1.05); /* Zoomar ut bilden lite vid hover för effekt */
+        }
+
+        /* Textstyling */
+        .founder-info {
+            text-align: center;
+            margin-top: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .founder-card:hover .founder-info {
+            transform: translateY(5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-5xl w-full">
+        <!-- Grid: 1 kolumn mobil, 2 kolumner desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            
+            <!-- Grundare 1 -->
+            <div class="founder-card group">
+                <div class="blob-wrapper">
+                    <!-- Denna div skapar det "levande" ljuset bakom -->
+                    <div class="blob-bg"></div>
+                    
+                    <div class="organic-mask-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" 
+                             alt="Grundare 1" 
+                             class="masked-image">
+                    </div>
+                </div>
+                <div class="founder-info">
+                    <h3 class="text-2xl font-bold text-slate-800 tracking-tight">Johan Karlsson</h3>
+                    <p class="text-blue-600 font-medium uppercase text-xs tracking-widest mt-1">Co-founder & Product</p>
+                </div>
+            </div>
+
+            <!-- Grundare 2 -->
+            <div class="founder-card group">
+                <div class="blob-wrapper">
+                    <!-- Bakgrunds-blob med annan färg/timing -->
+                    <div class="blob-bg" style="animation-delay: -3s; --blob-color-1: rgba(234, 88, 12, 0.2); --blob-color-2: rgba(249, 115, 22, 0.1);"></div>
+                    
+                    <div class="organic-mask-container" style="animation-delay: -4s; animation-duration: 9s;">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" 
+                             alt="Grundare 2" 
+                             class="masked-image">
+                    </div>
+                </div>
+                <div class="founder-info">
+                    <h3 class="text-2xl font-bold text-slate-800 tracking-tight">Sara Nilsson</h3>
+                    <p class="text-purple-600 font-medium uppercase text-xs tracking-widest mt-1">Co-founder & Design</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
