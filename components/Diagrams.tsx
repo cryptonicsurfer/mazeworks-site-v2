@@ -31,23 +31,23 @@ export const TransformerDecoderDiagram: React.FC<DiagramProps> = ({ lang }) => {
         {texts.desc}
       </p>
 
-      <div className="relative w-full max-w-lg h-56 bg-white rounded-lg shadow-inner overflow-hidden mb-6 border border-stone-200 flex items-center justify-center gap-8 p-4">
+      <div className="relative w-full max-w-lg h-44 md:h-56 bg-white rounded-lg shadow-inner overflow-hidden mb-6 border border-stone-200 flex items-center justify-center gap-2 sm:gap-4 md:gap-8 p-2 sm:p-4">
 
         {/* Input Stage */}
-        <div className="flex flex-col items-center gap-2">
-          <div className={`w-16 h-16 rounded-lg border-2 flex flex-col items-center justify-center transition-colors duration-500 ${step === 0 ? 'border-nobel-gold bg-nobel-gold/10' : 'border-stone-200 bg-stone-50'}`}>
-            <Database size={24} className={step === 0 ? 'text-nobel-gold' : 'text-stone-300'} />
+        <div className="flex flex-col items-center gap-1 sm:gap-2">
+          <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg border-2 flex flex-col items-center justify-center transition-colors duration-500 ${step === 0 ? 'border-nobel-gold bg-nobel-gold/10' : 'border-stone-200 bg-stone-50'}`}>
+            <Database className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${step === 0 ? 'text-nobel-gold' : 'text-stone-300'}`} />
           </div>
-          <span className="text-[10px] uppercase font-bold tracking-wider text-stone-500">{texts.raw}</span>
+          <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-500">{texts.raw}</span>
         </div>
 
         {/* Arrows */}
-        <motion.div animate={{ opacity: step >= 1 ? 1 : 0.3, x: step >= 1 ? 0 : -5 }}>→</motion.div>
+        <motion.div className="text-stone-400 text-sm sm:text-base" animate={{ opacity: step >= 1 ? 1 : 0.3, x: step >= 1 ? 0 : -5 }}>→</motion.div>
 
         {/* Transformer Stage */}
-        <div className="flex flex-col items-center gap-2">
-          <div className={`w-24 h-24 rounded-xl border-2 flex flex-col items-center justify-center gap-2 transition-colors duration-500 relative overflow-hidden ${step === 1 || step === 2 ? 'border-stone-800 bg-stone-900 text-white' : 'border-stone-200 bg-stone-50'}`}>
-            <Lock size={24} className={step === 1 || step === 2 ? 'text-nobel-gold animate-pulse' : 'text-stone-300'} />
+        <div className="flex flex-col items-center gap-1 sm:gap-2">
+          <div className={`w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl border-2 flex flex-col items-center justify-center gap-2 transition-colors duration-500 relative overflow-hidden ${step === 1 || step === 2 ? 'border-stone-800 bg-stone-900 text-white' : 'border-stone-200 bg-stone-50'}`}>
+            <Lock className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${step === 1 || step === 2 ? 'text-nobel-gold animate-pulse' : 'text-stone-300'}`} />
             {step === 1 && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-[1px] bg-nobel-gold absolute top-1/3 animate-ping"></div>
@@ -55,22 +55,22 @@ export const TransformerDecoderDiagram: React.FC<DiagramProps> = ({ lang }) => {
               </div>
             )}
           </div>
-          <span className="text-[10px] uppercase font-bold tracking-wider text-stone-500">{texts.logic}</span>
+          <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-500 text-center leading-tight">{texts.logic}</span>
         </div>
 
         {/* Arrows */}
-        <motion.div animate={{ opacity: step >= 3 ? 1 : 0.3, x: step >= 3 ? 0 : -5 }}>→</motion.div>
+        <motion.div className="text-stone-400 text-sm sm:text-base" animate={{ opacity: step >= 3 ? 1 : 0.3, x: step >= 3 ? 0 : -5 }}>→</motion.div>
 
         {/* Output Stage */}
-        <div className="flex flex-col items-center gap-2">
-          <div className={`w-16 h-16 rounded-lg border-2 flex flex-col items-center justify-center transition-colors duration-500 ${step === 3 ? 'border-green-500 bg-green-50' : 'border-stone-200 bg-stone-50'}`}>
+        <div className="flex flex-col items-center gap-1 sm:gap-2">
+          <div className={`w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg border-2 flex flex-col items-center justify-center transition-colors duration-500 ${step === 3 ? 'border-green-500 bg-green-50' : 'border-stone-200 bg-stone-50'}`}>
             {step === 3 ? (
-              <Globe size={24} className="text-green-600"/>
+              <Globe className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-600"/>
             ) : (
-              <span className="text-2xl font-serif text-stone-300">...</span>
+              <span className="text-lg sm:text-2xl font-serif text-stone-300">...</span>
             )}
           </div>
-          <span className="text-[10px] uppercase font-bold tracking-wider text-stone-500">{texts.result}</span>
+          <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-500">{texts.result}</span>
         </div>
       </div>
 

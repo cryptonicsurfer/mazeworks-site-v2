@@ -16,8 +16,8 @@ export const translations = {
     },
     hero: {
       est: "Est. 2025 \u2022 Halland, Sweden",
-      title_line1: "AI THAT",
-      title_line2: "ACTUALLY WORKS",
+      title_line1: "Beyond the",
+      title_line2: "PROMPT BOX",
       subtitle: "We've tested every major model since gpt-3 launched. We know what works, what doesn't, and what's hype. Now we build practical AI systems for businesses ready to move faster.",
       cta_model: "SEE HOW WE WORK",
       marquee: "PRACTITIONERS \u2022 NOT CONSULTANTS"
@@ -120,8 +120,8 @@ export const translations = {
     },
     hero: {
       est: "Etablerad 2025 \u2022 Halland, Sverige",
-      title_line1: "AI SOM",
-      title_line2: "FAKTISKT LEVERERAR",
+      title_line1: "AI - mer än",
+      title_line2: "<PROMPT>",
       subtitle: "Vi har testat varje SOTA modell sedan gpt-3 lanserades. Vi vet vad som fungerar, vad som inte g\u00f6r det, och vad som \u00e4r hype. Nu bygger vi praktiska AI-system f\u00f6r f\u00f6retag som vill r\u00f6ra sig snabbare.",
       cta_model: "SE HUR VI ARBETAR",
       marquee: "PRAKTIKER \u2022 INTE KONSULTER"
