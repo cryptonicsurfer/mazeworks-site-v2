@@ -279,15 +279,15 @@ const AgentInteractionNetwork: React.FC<AgentInteractionNetworkProps> = ({ lang 
   };
 
   return (
-    <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm border border-stone-200 my-8">
-      <h3 className="font-serif text-xl mb-4 text-stone-800">{texts.title}</h3>
+    <div className="flex flex-col items-center p-4 md:p-8 bg-white rounded-xl shadow-sm border border-stone-200 my-8">
+      <h3 className="font-serif text-lg md:text-xl mb-3 md:mb-4 text-stone-800">{texts.title}</h3>
       <p
-        className="text-sm text-stone-500 mb-6 text-center max-w-md"
+        className="text-xs md:text-sm text-stone-500 mb-4 md:mb-6 text-center max-w-md px-2"
         dangerouslySetInnerHTML={{ __html: texts.desc }}
       />
 
-      <div className="bg-[#F5F5F3] rounded-xl p-5 mb-6 w-full max-w-[580px]">
-        <svg width="100%" viewBox="0 0 600 400" className="block">
+      <div className="bg-[#F5F5F3] rounded-xl p-2 md:p-5 mb-4 md:mb-6 w-full max-w-[580px]">
+        <svg width="100%" viewBox="100 40 400 320" className="block">
           {/* Definitions */}
           <defs>
             <filter id="glow">
@@ -363,17 +363,17 @@ const AgentInteractionNetwork: React.FC<AgentInteractionNetworkProps> = ({ lang 
       </div>
 
       {/* Legend */}
-      <div className="flex justify-center gap-8 text-sm text-stone-500">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-stone-800" />
+      <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-xs md:text-sm text-stone-500">
+        <div className="flex items-center gap-1.5 md:gap-2">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-stone-800" />
           <span>{texts.context}</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-sm bg-nobel-gold" />
+        <div className="flex items-center gap-1.5 md:gap-2">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-sm bg-nobel-gold" />
           <span>{texts.agentAction}</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-sm bg-stone-300" />
+        <div className="flex items-center gap-1.5 md:gap-2">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-sm bg-stone-300" />
           <span>{texts.toolResource}</span>
         </div>
       </div>
