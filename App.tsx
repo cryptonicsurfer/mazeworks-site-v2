@@ -11,7 +11,7 @@ import StoriesPage from './pages/StoriesPage';
 import { Language } from './translations';
 
 // === EASY TOGGLES ===
-const ENABLE_GLOBAL_GRAIN = true;  // Set to false to disable grain on entire site
+const ENABLE_GLOBAL_GRAIN = false;  // Set to false to disable grain on entire site (now using GrainOverlay per-element)
 const GRAIN_OPACITY = 0.9;           // 0-1, lower = more subtle
 const GRAIN_ANIMATED = false;      // Set to false for static grain
 

@@ -9,6 +9,7 @@ import { HeroScene } from '../components/QuantumScene';
 import { TransformerDecoderDiagram, PerformanceMetricDiagram } from '../components/Diagrams';
 import AgentInteractionNetwork from '../components/AgentInteractionNetwork';
 import OrganicFounderImages from '../components/OrganicFounderImages';
+import GrainOverlay from '../components/GrainOverlay';
 import { translations, Language } from '../translations';
 import { ArrowDown, Menu, X, Cpu, Briefcase, Database, Shield, Layers, Workflow, Server, Search, Settings, BookOpen } from 'lucide-react';
 
@@ -150,6 +151,16 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
       {/* Hero Section */}
       <header className="relative h-screen flex items-center justify-center overflow-hidden">
         <HeroScene />
+        {/* Grain overlay for entire hero viewport */}
+        <div
+          className="absolute inset-0 pointer-events-none z-[2]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E")`,
+            backgroundSize: '512px 512px',
+            opacity: 0.7,
+            mixBlendMode: 'multiply',
+          }}
+        />
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(249,248,244,0.85)_0%,rgba(249,248,244,0.5)_50%,rgba(249,248,244,0.2)_100%)]" />
@@ -210,6 +221,7 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
                     { name: "Frej Andreassen", role: content.team.roles[0], image: "/frej.jpeg" },
                     { name: "Paul Klinteby", role: content.team.roles[1], image: "/palle.jpeg" },
                   ]}
+                  grain={true}
                 />
            </div>
         </section>
@@ -264,7 +276,9 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                      <div className="order-2 lg:order-1">
-                        <AgentInteractionNetwork lang={lang} />
+                        <GrainOverlay opacity={0.35} rounded="rounded-2xl">
+                          <AgentInteractionNetwork lang={lang} />
+                        </GrainOverlay>
                      </div>
                      <div className="order-1 lg:order-2">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-white text-stone-600 text-xs font-bold tracking-widest uppercase rounded-full mb-6 border border-stone-200">
@@ -316,6 +330,16 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
                         <div className="absolute inset-0 bg-nobel-gold/5 blur-[80px] rounded-full"></div>
                         <div className="aspect-square bg-white rounded-xl shadow-lg border border-stone-200 relative overflow-hidden flex items-center justify-center p-8">
                              <HeroScene />
+                             {/* Grain overlay for 3D blobs */}
+                             <div
+                               className="absolute inset-0 pointer-events-none z-[1] rounded-xl"
+                               style={{
+                                 backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E")`,
+                                 backgroundSize: '100% 100%',
+                                 opacity: 0.3,
+                                 mixBlendMode: 'multiply',
+                               }}
+                             />
 
                             {/* Frosted Glass Card with Grain */}
                             <div className="relative z-10 px-8 py-5 rounded-2xl border border-white/50 bg-white/20 backdrop-blur-[30px] shadow-[0_4px_20px_rgba(0,0,0,0.06)] overflow-hidden">
@@ -346,7 +370,9 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                      <div className="order-2 lg:order-1">
-                        <TransformerDecoderDiagram lang={lang} />
+                        <GrainOverlay opacity={0.25} rounded="rounded-lg">
+                          <TransformerDecoderDiagram lang={lang} />
+                        </GrainOverlay>
                      </div>
                      <div className="order-1 lg:order-2">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-800 text-nobel-gold text-xs font-bold tracking-widest uppercase rounded-full mb-6 border border-stone-700">
@@ -374,7 +400,9 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto">
-                    <PerformanceMetricDiagram lang={lang} />
+                    <GrainOverlay opacity={0.2} rounded="rounded-lg">
+                      <PerformanceMetricDiagram lang={lang} />
+                    </GrainOverlay>
                 </div>
             </div>
         </section>
