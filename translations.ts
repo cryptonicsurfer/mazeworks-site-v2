@@ -8,77 +8,98 @@ export type Language = 'en' | 'sv';
 export const translations = {
   en: {
     nav: {
-      vision: "Our Approach",
-      stack: "The Stack",
-      integration: "AI Agents",
-      strategy: "Strategy",
+      services: "Services",
+      approach: "How We Work",
+      techDeep: "For Tech Enthusiasts",
       contact: "Get In Touch"
     },
     hero: {
-      est: "Est. 2025 \u2022 Halland, Sweden",
-      title_line1: "Beyond the",
-      title_line2: "PROMPT BOX",
-      subtitle: "We've tested every major model since gpt-3 launched. We know what works, what doesn't, and what's hype. Now we build practical AI systems for businesses ready to move faster.",
-      cta_model: "SEE HOW WE WORK",
-      marquee: "PRACTITIONERS \u2022 NOT CONSULTANTS"
+      location: "AI Agency in Falkenberg",
+      title_line1: "We Are an",
+      title_line2: "AI Agency",
+      subtitle: "Need a website? We build it with AI. Business systems? AI. Bookkeeping? AI. IT support? AI. We're a full-service agency that uses AI in everything we do — which means faster delivery and better results.",
+      cta: "See What We Do"
     },
-    model: {
-      label: "Our Approach",
-      title: "From Insight to Infrastructure",
-      desc_start: "W",
-      desc: "e don't sell tools we haven't used ourselves. Since 2022, we've tracked every major AI release, tested hundreds of models, and built real systems. That research becomes your competitive advantage.",
-      cards: [
-        { step: "01", title: "Understand", desc: "We map your workflows and pain points. No generic audits \u2013 we dig into what actually slows you down and where AI creates real value." },
-        { step: "02", title: "Build", desc: "We deploy open-source infrastructure you control. CRM, automation, knowledge bases \u2013 integrated and ready for AI from day one." },
-        { step: "03", title: "Connect", desc: "This is where it gets interesting. We wire up AI agents that talk to your systems, automate workflows, and handle tasks autonomously." },
-        { step: "04", title: "Evolve", desc: "AI moves fast. We monitor, update, and swap in better tools as they emerge. Your system stays current without the vendor lock-in." }
+    services: {
+      label: "What We Do",
+      title: "One Partner, All Your Digital Needs",
+      subtitle: "Instead of juggling multiple expensive agencies, you get one local partner who handles everything — powered by AI.",
+      items: [
+        {
+          title: "Web & Digital",
+          desc: "Websites, web apps, e-commerce. We build modern digital solutions that work on all devices.",
+          examples: "Websites, landing pages, web apps, e-commerce"
+        },
+        {
+          title: "Business Systems",
+          desc: "CRM, ERP, project management. We set up and integrate the systems that run your business.",
+          examples: "CRM, ERP, inventory, project tools"
+        },
+        {
+          title: "AI & Automation",
+          desc: "Automate repetitive tasks. Let AI handle what steals your time so you can focus on what matters.",
+          examples: "Workflow automation, chatbots, AI integrations"
+        },
+        {
+          title: "Bookkeeping & BI",
+          desc: "Financial systems and reports that give you control. See how your business is doing — in real time.",
+          examples: "Bookkeeping, reporting, dashboards"
+        },
+        {
+          title: "IT Partner",
+          desc: "We become your IT department. Support, infrastructure, security, strategic advice — everything.",
+          examples: "Helpdesk, cloud, security, IT strategy"
+        }
       ]
     },
-    stack: {
-      label: "THE TOOLKIT",
-      title: "Open Source, AI-Native",
-      desc: "Microsoft and Salesforce charge per user and update slowly. We build on open-source tools that cost less, adapt faster, and integrate with any AI model \u2013 not just the vendor's.",
-      growth: "Growth & Sales",
-      ops: "Operations & Structure",
-      ai: "Integration & AI",
-      cloud_title: "Your Infrastructure",
-      cloud_desc: "Owned \u2022 Flexible \u2022 AI-Ready"
+    approach: {
+      label: "How We Work",
+      title: "From Idea to Running System",
+      desc: "We don't just deliver and disappear. We build solutions you own and understand, and we stick around to make sure everything keeps working.",
+      steps: [
+        { title: "Understand", desc: "We map your needs and pain points. No generic audits — we dig into what actually slows you down." },
+        { title: "Build", desc: "We build with AI, which means faster delivery. You get something that works, not a 6-month project." },
+        { title: "Support", desc: "We don't disappear after launch. We're here when you need us — that's what local partners are for." }
+      ]
     },
-    integration: {
-      label: "AGENTIC SYSTEMS",
-      title: "AI That Acts, Not Just Answers",
-      desc1: "Most companies stop at chatbots. We build <strong>agent systems</strong> where AI models coordinate with each other via <strong>MCP</strong> and <strong>A2A protocols</strong> to actually get work done.",
-      desc2: "Your sales agent spots an opportunity, alerts the project agent, who spins up resources and notifies the team. Orchestrated by <strong>n8n</strong>, these systems handle complexity that would require entire departments.",
-      caption: "Watch how agents (colored) exchange context to operate tools (grey) autonomously."
-    },
-    strategy: {
-      label: "BUSINESS + TECH",
-      title: "Strategy Meets Implementation",
-      desc1: "We've built DCF models, run due diligence, and closed transactions. We understand unit economics, scaling challenges, and why the wrong tech stack kills growth.",
-      desc2: "That business lens shapes every technical decision. We don't just implement \u2013 we help you aim the AI at problems that actually move the needle."
-    },
-    metrics: {
-      title: "Why Open Systems Win",
-      desc: "The AI landscape changes weekly. Locked-in vendors can't keep up. Open infrastructure lets you adopt the best tools instantly."
+    local: {
+      label: "Local in Falkenberg",
+      title: "Your Neighbor, Your IT Partner",
+      desc: "We're based in Falkenberg and work primarily with companies in the area. When you hire us, you're supporting local business — and you get a partner you can actually meet for coffee.",
+      cta: "That matters to us."
     },
     team: {
-      label: "WHO WE ARE",
-      title: "Practitioners First",
-      desc: "18 public AI webinars since 2023. Hundreds of models tested. Systems built and deployed. We teach what we use and sell what we've proven.",
+      label: "Who We Are",
+      title: "Practitioners, Not Salespeople",
+      desc: "We've tested every major AI model since GPT-3 launched. We've built systems, run webinars, and worked hands-on with the technology. We sell what we use ourselves.",
       roles: ["AI Implementation Specialist", "AI Implementation Specialist"]
     },
+    techDeep: {
+      label: "For Tech Enthusiasts",
+      title: "Under the Hood",
+      desc: "Curious about what makes our solutions tick? Here's how we think about AI architecture.",
+      agents: {
+        title: "Agentic Systems",
+        desc: "We build agent systems where AI models coordinate via MCP and A2A protocols. Your sales agent spots an opportunity, alerts the project agent, who spins up resources. Orchestrated by n8n.",
+        caption: "Watch how agents (colored) exchange context to operate tools (grey) autonomously."
+      },
+      stack: {
+        title: "Open Source Stack",
+        desc: "We build on open-source tools: Twenty (CRM), n8n (automation), Directus (CMS), and more. No vendor lock-in, lower costs, full control."
+      }
+    },
     contact: {
-      title: "Ready to Build?",
-      desc: "Skip the generic AI audit. Let's talk about what you're actually trying to solve.",
-      cta: "Start a Conversation"
+      title: "Curious?",
+      desc: "Let's have a coffee and talk about what you need. No sales pitch — just a conversation about your challenges.",
+      cta: "Get In Touch"
     },
     footer: {
-      rights: "\u00a9 2025 Mazeworks AB. Halland, Sweden."
+      rights: "© 2025 Mazeworks AB. Falkenberg, Sweden."
     },
     diagrams: {
       agentNetwork: {
         title: "Agent Interaction Mesh",
-        desc: "Watch <strong>autonomous agents</strong> (colored) exchange context via <strong>MCP</strong> to operate your systems. They coordinate to solve problems \u2013 no human in the loop required.",
+        desc: "Watch <strong>autonomous agents</strong> (colored) exchange context via <strong>MCP</strong> to operate your systems. They coordinate to solve problems — no human in the loop required.",
         context: "Context",
         agentAction: "Agent Action",
         toolResource: "Tool/Resource"
@@ -112,104 +133,125 @@ export const translations = {
   },
   sv: {
     nav: {
-      vision: "V\u00e5rt S\u00e4tt",
-      stack: "Verktygen",
-      integration: "AI-Agenter",
-      strategy: "Strategi",
+      services: "Tjänster",
+      approach: "Så Jobbar Vi",
+      techDeep: "För Teknikintresserade",
       contact: "Kontakta Oss"
     },
     hero: {
-      est: "Etablerad 2025 \u2022 Halland, Sverige",
-      title_line1: "AI - mer än",
-      title_line2: "<PROMPT>",
-      subtitle: "Vi har testat varje SOTA modell sedan gpt-3 lanserades. Vi vet vad som fungerar, vad som inte g\u00f6r det, och vad som \u00e4r hype. Nu bygger vi praktiska AI-system f\u00f6r f\u00f6retag som vill r\u00f6ra sig snabbare.",
-      cta_model: "SE HUR VI ARBETAR",
-      marquee: "PRAKTIKER \u2022 INTE KONSULTER"
+      location: "AI-byrå i Falkenberg",
+      title_line1: "Vi är en",
+      title_line2: "AI-byrå",
+      subtitle: "Behöver ni en hemsida? Vi bygger den med AI. Affärssystem? AI. Bokföring? AI. IT-support? AI. Vi är en fullservicebyrå som använder AI i allt vi gör — vilket betyder snabbare leverans och bättre resultat.",
+      cta: "Se Vad Vi Gör"
     },
-    model: {
-      label: "V\u00e5rt S\u00e4tt",
-      title: "Fr\u00e5n Insikt till Infrastruktur",
-      desc_start: "V",
-      desc: "i s\u00e4ljer inte verktyg vi inte anv\u00e4nt sj\u00e4lva. Sedan 2022 har vi f\u00f6ljt varje stor AI-release, testat hundratals modeller och byggt riktiga system. Den forskningen blir er konkurrensf\u00f6rdel.",
-      cards: [
-        { step: "01", title: "F\u00f6rst\u00e5", desc: "Vi kartl\u00e4gger era arbetsfl\u00f6den och smärtpunkter. Inga generiska audits \u2013 vi gr\u00e4ver i vad som faktiskt bromsar er och var AI skapar verkligt v\u00e4rde." },
-        { step: "02", title: "Bygg", desc: "Vi s\u00e4tter upp \u00f6ppen k\u00e4llkods-infrastruktur ni kontrollerar. CRM, automation, kunskapsbaser \u2013 integrerat och AI-redo fr\u00e5n dag ett." },
-        { step: "03", title: "Koppla", desc: "H\u00e4r blir det intressant. Vi kopplar ihop AI-agenter som pratar med era system, automatiserar fl\u00f6den och hanterar uppgifter autonomt." },
-        { step: "04", title: "Utveckla", desc: "AI r\u00f6r sig snabbt. Vi \u00f6vervakar, uppdaterar och byter in b\u00e4ttre verktyg n\u00e4r de dyker upp. Ert system h\u00e5lls aktuellt utan vendor lock-in." }
+    services: {
+      label: "Vad Vi Gör",
+      title: "En Partner, Alla Era Digitala Behov",
+      subtitle: "Istället för att jonglera flera dyra byråer får ni en lokal partner som fixar allt — med AI som motor.",
+      items: [
+        {
+          title: "Webb & Digitalt",
+          desc: "Hemsidor, webbappar, e-handel. Vi bygger moderna digitala lösningar som fungerar på alla enheter.",
+          examples: "Hemsidor, landningssidor, webbappar, e-handel"
+        },
+        {
+          title: "Affärssystem",
+          desc: "CRM, ERP, projekthantering. Vi sätter upp och integrerar systemen som driver ert företag.",
+          examples: "CRM, ERP, lager, projektverktyg"
+        },
+        {
+          title: "AI & Automation",
+          desc: "Automatisera det repetitiva. Låt AI hantera det som stjäl er tid så ni kan fokusera på det som spelar roll.",
+          examples: "Flödesautomation, chatbotar, AI-integrationer"
+        },
+        {
+          title: "Bokföring & BI",
+          desc: "Ekonomisystem och rapporter som ger er kontroll. Se hur företaget mår — i realtid.",
+          examples: "Bokföring, rapportering, dashboards"
+        },
+        {
+          title: "IT-Partner",
+          desc: "Vi blir er IT-avdelning. Support, infrastruktur, säkerhet, strategisk rådgivning — hela paketet.",
+          examples: "Helpdesk, moln, säkerhet, IT-strategi"
+        }
       ]
     },
-    stack: {
-      label: "VERKTYGSL\u00c5DAN",
-      title: "\u00d6ppen K\u00e4llkod, AI-Native",
-      desc: "Microsoft och Salesforce tar betalt per anv\u00e4ndare och uppdaterar l\u00e5ngsamt. Vi bygger p\u00e5 \u00f6ppna verktyg som kostar mindre, anpassar sig snabbare och integrerar med vilken AI-modell som helst.",
-      growth: "Tillv\u00e4xt & F\u00f6rs\u00e4ljning",
-      ops: "Verksamhet & Struktur",
-      ai: "Integration & AI",
-      cloud_title: "Er Infrastruktur",
-      cloud_desc: "\u00c4gd \u2022 Flexibel \u2022 AI-Redo"
+    approach: {
+      label: "Så Jobbar Vi",
+      title: "Från Idé till Fungerande System",
+      desc: "Vi levererar inte bara och försvinner. Vi bygger lösningar ni äger och förstår, och vi finns kvar för att se till att allt fortsätter fungera.",
+      steps: [
+        { title: "Förstå", desc: "Vi kartlägger era behov och smärtpunkter. Inga generiska audits — vi gräver i vad som faktiskt bromsar er." },
+        { title: "Bygga", desc: "Vi bygger med AI, vilket betyder snabbare leverans. Ni får något som funkar, inte ett 6-månaders projekt." },
+        { title: "Stötta", desc: "Vi försvinner inte efter lansering. Vi finns här när ni behöver oss — det är det lokala partners är till för." }
+      ]
     },
-    integration: {
-      label: "AGENTSYSTEM",
-      title: "AI Som Agerar, Inte Bara Svarar",
-      desc1: "De flesta stannar vid chatbotar. Vi bygger <strong>agentsystem</strong> d\u00e4r AI-modeller koordinerar med varandra via <strong>MCP</strong> och <strong>A2A-protokoll</strong> f\u00f6r att faktiskt f\u00e5 jobb gjort.",
-      desc2: "Er s\u00e4ljagent uppt\u00e4cker en m\u00f6jlighet, varnar projektagenten, som startar resurser och meddelar teamet. Orkestrerat av <strong>n8n</strong> hanterar dessa system komplexitet som annars kr\u00e4ver hela avdelningar.",
-      caption: "Se hur agenter (f\u00e4rgade) utbyter kontext f\u00f6r att styra verktyg (gr\u00e5) autonomt."
-    },
-    strategy: {
-      label: "AFF\u00c4R + TEKNIK",
-      title: "Strategi M\u00f6ter Implementation",
-      desc1: "Vi har byggt DCF-modeller, k\u00f6rt due diligence och genomf\u00f6rt transaktioner. Vi f\u00f6rst\u00e5r enhetsekonomi, skalningsutmaningar och varf\u00f6r fel teknikstack d\u00f6dar tillv\u00e4xt.",
-      desc2: "Det aff\u00e4rsm\u00e4ssiga perspektivet formar varje tekniskt beslut. Vi implementerar inte bara \u2013 vi hj\u00e4lper er rikta AI:n mot problem som faktiskt flyttar n\u00e5len."
-    },
-    metrics: {
-      title: "Varf\u00f6r \u00d6ppna System Vinner",
-      desc: "AI-landskapet f\u00f6r\u00e4ndras varje vecka. Inl\u00e5sta leverant\u00f6rer h\u00e4nger inte med. \u00d6ppen infrastruktur l\u00e5ter er anamma de b\u00e4sta verktygen direkt."
+    local: {
+      label: "Lokalt i Falkenberg",
+      title: "Er Granne, Er IT-Partner",
+      desc: "Vi sitter i Falkenberg och jobbar främst med företag i området. När ni anlitar oss stöttar ni lokalt näringsliv — och ni får en partner ni faktiskt kan träffa över en kaffe.",
+      cta: "Det betyder något för oss."
     },
     team: {
-      label: "VILKA VI \u00c4R",
-      title: "Praktiker F\u00f6rst",
-      desc: "18 publika AI-webbinarier sedan 2023. Hundratals modeller testade. System byggda och driftsatta. Vi l\u00e4r ut det vi anv\u00e4nder och s\u00e4ljer det vi bevisat.",
+      label: "Vilka Vi Är",
+      title: "Praktiker, Inte Säljare",
+      desc: "Vi har testat varje stor AI-modell sedan GPT-3 lanserades. Vi har byggt system, hållit webbinarier och jobbat hands-on med tekniken. Vi säljer det vi själva använder.",
       roles: ["AI-implementeringsspecialist", "AI-implementeringsspecialist"]
     },
+    techDeep: {
+      label: "För Teknikintresserade",
+      title: "Under Huven",
+      desc: "Nyfiken på vad som driver våra lösningar? Så här tänker vi kring AI-arkitektur.",
+      agents: {
+        title: "Agentsystem",
+        desc: "Vi bygger agentsystem där AI-modeller koordinerar via MCP och A2A-protokoll. Er säljagent upptäcker en möjlighet, varnar projektagenten, som startar resurser. Orkestrerat av n8n.",
+        caption: "Se hur agenter (färgade) utbyter kontext för att styra verktyg (grå) autonomt."
+      },
+      stack: {
+        title: "Open Source-stack",
+        desc: "Vi bygger på open source-verktyg: Twenty (CRM), n8n (automation), Directus (CMS), med mera. Ingen vendor lock-in, lägre kostnader, full kontroll."
+      }
+    },
     contact: {
-      title: "Redo att Bygga?",
-      desc: "Skippa den generiska AI-auditen. L\u00e5t oss prata om vad ni faktiskt f\u00f6rs\u00f6ker l\u00f6sa.",
-      cta: "Starta en Konversation"
+      title: "Nyfikna?",
+      desc: "Vi tar en kaffe och pratar om vad ni behöver. Ingen säljpitch — bara ett samtal om era utmaningar.",
+      cta: "Hör Av Er"
     },
     footer: {
-      rights: "\u00a9 2025 Mazeworks AB. Halland, Sverige."
+      rights: "© 2025 Mazeworks AB. Falkenberg, Sverige."
     },
     diagrams: {
       agentNetwork: {
-        title: "Agent-interaktionsn\u00e4t",
-        desc: "Se hur <strong>autonoma agenter</strong> (f\u00e4rgade) utbyter kontext via <strong>MCP</strong> f\u00f6r att styra era system. De koordinerar f\u00f6r att l\u00f6sa problem \u2013 ingen m\u00e4nniska i loopen kr\u00e4vs.",
+        title: "Agent-interaktionsnät",
+        desc: "Se hur <strong>autonoma agenter</strong> (färgade) utbyter kontext via <strong>MCP</strong> för att styra era system. De koordinerar för att lösa problem — ingen människa i loopen krävs.",
         context: "Kontext",
         agentAction: "Agenthandling",
         toolResource: "Verktyg/Resurs"
       },
       transformer: {
         title: "Er AI-Motor",
-        desc: "Er data stannar i er infrastruktur. Fr\u00e5n input till insikt l\u00e4mnar ingenting era gr\u00e4nser.",
-        raw: "R\u00e5data",
-        logic: "S\u00e4ker Bearbetning",
+        desc: "Er data stannar i er infrastruktur. Från input till insikt lämnar ingenting era gränser.",
+        raw: "Rådata",
+        logic: "Säker Bearbetning",
         result: "Resultat"
       },
       performance: {
-        title: "Mazeworks-F\u00f6rdelen",
+        title: "Mazeworks-Fördelen",
         metrics: {
           Value: "Kostnadseffektivitet",
           Freedom: "Datakontroll",
           Innovation: "Anpassningsbarhet"
         },
         desc: {
-          Value: "Inga licensavgifter per anv\u00e4ndare. Varje krona bygger permanent infrastruktur ist\u00e4llet f\u00f6r att betala hyra till mjukvaruleverant\u00f6rer.",
-          Freedom: "100% datasuver\u00e4nitet. Er kunddata, ert IP, era regler. Ingen inl\u00e5sning hos tredje part.",
-          Innovation: "Ny AI-modell sl\u00e4pps? Koppla in den. \u00d6ppna system l\u00e5ter er anamma de b\u00e4sta verktygen dagen de lanseras."
+          Value: "Inga licensavgifter per användare. Varje krona bygger permanent infrastruktur istället för att betala hyra till mjukvaruleverantörer.",
+          Freedom: "100% datasuveränitet. Er kunddata, ert IP, era regler. Ingen inlåsning hos tredje part.",
+          Innovation: "Ny AI-modell släpps? Koppla in den. Öppna system låter er anamma de bästa verktygen dagen de lanseras."
         },
         labels: {
           legacy: "Legacy SaaS",
           mazeworks: "Mazeworks",
-          score: "J\u00c4MF\u00d6RELSEV\u00c4RDE"
+          score: "JÄMFÖRELSEVÄRDE"
         }
       }
     }

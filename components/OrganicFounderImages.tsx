@@ -9,6 +9,8 @@ interface Founder {
   name: string;
   role: string;
   image: string;
+  email?: string;
+  phone?: string;
 }
 
 interface OrganicFounderImagesProps {
@@ -166,9 +168,23 @@ const OrganicFounderImages: React.FC<OrganicFounderImagesProps> = ({ founders, g
                 {founder.name}
               </h3>
               <div className="w-12 h-0.5 bg-nobel-gold mx-auto mb-4 opacity-60 group-hover:w-20 transition-all duration-500"></div>
-              <p className="text-stone-500 font-bold uppercase text-xs tracking-widest">
+              <p className="text-stone-500 font-bold uppercase text-xs tracking-widest mb-4">
                 {founder.role}
               </p>
+              {(founder.email || founder.phone) && (
+                <div className="pt-3 border-t border-stone-100 space-y-1">
+                  {founder.email && (
+                    <a href={`mailto:${founder.email}`} className="block text-sm text-stone-600 hover:text-nobel-gold transition-colors">
+                      {founder.email}
+                    </a>
+                  )}
+                  {founder.phone && (
+                    <a href={`tel:${founder.phone}`} className="block text-sm text-stone-600 hover:text-nobel-gold transition-colors">
+                      {founder.phone}
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ))}
