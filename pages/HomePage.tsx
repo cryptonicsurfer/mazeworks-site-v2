@@ -185,7 +185,7 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
             {/* Content */}
             <div className="relative z-10 px-8 md:px-16 py-8 md:py-12 pb-12 md:pb-16">
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight md:leading-[1.1] mb-8 text-stone-900">
-                {content.hero.title_line1} <br/><span className="text-nobel-gold">{content.hero.title_line2}</span>
+                {content.hero.title_line1} <br/><span className="text-nobel-gold" style={{ textShadow: '0 0 20px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.1)' }}>{content.hero.title_line2}</span>
               </h1>
               <p className="max-w-2xl mx-auto text-lg md:text-xl text-stone-700 font-light leading-relaxed mb-12">
                 {content.hero.subtitle}
@@ -370,9 +370,12 @@ export default function HomePage({ lang, setLang }: HomePageProps) {
                 <h2 className="font-serif text-4xl md:text-5xl mb-6">{content.contact.title}</h2>
                 <p className="text-stone-400 text-xl mb-12 max-w-2xl mx-auto">{content.contact.desc}</p>
 
-                <button className="px-10 py-4 bg-nobel-gold text-stone-900 font-bold tracking-wider uppercase rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(197,160,89,0.3)]">
+                <a
+                    href="mailto:frej@mazeworks.se,paul@mazeworks.se"
+                    className="inline-block px-10 py-4 bg-nobel-gold text-stone-900 font-bold tracking-wider uppercase rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(197,160,89,0.3)]"
+                >
                     {content.contact.cta}
-                </button>
+                </a>
             </div>
         </section>
 
